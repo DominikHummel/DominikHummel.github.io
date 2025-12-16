@@ -7,15 +7,15 @@
   <meta name="description" content="Curriculum Vitae of Dominik Andrin Hummel – Technician Specialist in Forest and Soil Ecology" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #ffffff;
+      --bg: #f0f0ef;
       --fg: #1f2933;
       --muted: #6b7280;
       --accent: #0f766e;
-      --border: #e5e7eb;
+      --border: #d1d5db;
     }
 
     * {
@@ -24,40 +24,68 @@
 
     body {
       margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--fg);
       background: var(--bg);
       line-height: 1.6;
     }
 
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-
-    /* Header */
+    /* Fixed Header */
     header {
-      margin-bottom: 4rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
-      font-size: 2.4rem;
-      margin: 0 0 0.5rem 0;
+      font-size: 1.8rem;
+      margin: 0;
       font-weight: 700;
     }
 
     header h2 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 500;
       color: var(--accent);
-      margin: 0 0 1rem 0;
+      margin: 0;
     }
 
-    header p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
+    header nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    header nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Page content */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem 2rem; /* top padding for fixed header */
+    }
+
+    /* Profile picture */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 2rem auto;
+      border: 4px solid var(--accent);
     }
 
     /* Section */
@@ -66,7 +94,7 @@
     }
 
     section h3 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
       padding-bottom: 0.4rem;
@@ -117,32 +145,45 @@
       text-align: center;
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
       .page {
-        padding: 3rem 1.5rem;
+        padding: 6rem 1.5rem 2rem 1.5rem;
       }
 
       header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+      }
+
+      header h2 {
+        font-size: 0.9rem;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="page">
-
-    <header>
+  <header>
+    <div>
       <h1>Dominik Andrin Hummel</h1>
       <h2>Technician Specialist · Forest & Soil Ecology</h2>
-      <p>
-        Switzerland · 
-        <a href="mailto:hummeldethz@gmail.com">hummeldethz@gmail.com</a> · 
-        +41 78 219 71 46
-      </p>
-    </header>
+    </div>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#work">Work</a>
+      <a href="#education">Education</a>
+    </nav>
+  </header>
 
-    <section>
+  <div class="page">
+    <img src="WhatsApp Image 2025-07-22 at 21.44.00.jpeg" alt="Profile Picture" class="profile-pic">
+
+    <section id="profile">
       <h3>Profile</h3>
       <p>
         Technician specialist with a Master’s degree in Agricultural Science (Animal Science)
@@ -152,7 +193,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="work">
       <h3>Work Experience</h3>
 
       <div class="entry">
@@ -204,7 +245,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="education">
       <h3>Education</h3>
 
       <div class="entry">
