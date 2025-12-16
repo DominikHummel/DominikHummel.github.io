@@ -11,11 +11,10 @@
 
   <style>
     :root {
-      --bg: #f5e9da; /* warm beige background */
+      --bg: #fcf8f2; /* unified warm beige background */
       --fg: #1f2933;
       --muted: #6b5e57;
       --accent: #0f766e;
-      --border: #d1cfc7;
     }
 
     * {
@@ -36,8 +35,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(245, 233, 218, 0.95);
-      border-bottom: 1px solid var(--border);
+      background: rgba(252, 248, 242, 0.95);
+      border-bottom: 1px solid #e0dcd5;
       z-index: 1000;
       padding: 1rem 2rem;
       display: flex;
@@ -59,20 +58,21 @@
     /* Hero Section */
     .hero {
       height: 100vh;
-      background: url('WhatsApp Image 2025-07-22 at 21.44.00.jpeg') center/cover no-repeat;
+      background: url('WhatsApp%20Image%202025-07-22%20at%2021.44.00.jpeg') center/cover no-repeat;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start; /* move content toward top */
       text-align: center;
       color: white;
       position: relative;
+      padding-top: 8rem; /* moves title up from center */
     }
 
     .hero::after {
       content: "";
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.4); /* dark overlay for readability */
+      background: rgba(0,0,0,0.25); /* subtle overlay for readability */
     }
 
     .hero-content {
@@ -99,22 +99,17 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 4rem 2rem;
+      background: transparent; /* no different background color */
     }
 
     section {
       margin-bottom: 3.5rem;
-      background: rgba(255,255,255,0.8);
-      padding: 1.5rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     section h3 {
       font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
 
     .entry {
@@ -149,7 +144,6 @@
     footer {
       margin-top: 4rem;
       padding-top: 2rem;
-      border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--muted);
       text-align: center;
@@ -162,8 +156,8 @@
       .hero h2 {
         font-size: 1.1rem;
       }
-      section {
-        padding: 1rem 1.2rem;
+      .page {
+        padding: 3rem 1.5rem;
       }
     }
   </style>
@@ -211,7 +205,7 @@
           <li>Development of GPS usage standards and internal training</li>
         </ul>
       </div>
-      <!-- Additional work entries as before -->
+      <!-- Additional work entries -->
     </section>
 
     <section id="education">
@@ -223,7 +217,7 @@
         </div>
         <p>University of Bern</p>
       </div>
-      <!-- Additional education entries as before -->
+      <!-- Additional education entries -->
     </section>
 
     <footer>
