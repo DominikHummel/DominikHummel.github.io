@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Photography – Bernese Glaciers · Dominik Andrin Hummel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fcfbfa;
+      --fg: #1f2933;
+      --muted: #6b5e57;
+      --accent: #0f766e;
+      --header-height: 56px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "ITC Berkeley Oldstyle", "Libre Baskerville", Georgia, serif;
+      font-size: 10pt;
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: var(--header-height);
+      background: rgba(252, 251, 250, 0.95);
+      border-bottom: 1px solid #e0dcd5;
+      z-index: 1000;
+      padding: 0.8rem 2rem;
+      text-align: center;
+    }
+
+    header a {
+      text-decoration: none;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 10pt;
+      color: var(--fg);
+    }
+
+    header a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      margin-top: var(--header-height);
+      height: 55vh;
+      background: url('glacier-hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.4));
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    /* Page */
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem 2rem;
+    }
+
+    /* Intro text */
+    .intro {
+      max-width: 720px;
+      margin: 0 auto 4rem auto;
+    }
+
+    .intro p {
+      margin: 0 0 1.5rem 0;
+    }
+
+    /* Gallery */
+    .gallery {
+      column-count: 3;
+      column-gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      break-inside: avoid;
+      border-radius: 2px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 9pt;
+      color: var(--muted);
+      margin-top: 5rem;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        height: 45vh;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .gallery {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← Back to CV</a>
+</header>
+
+<div class="hero">
+  <h1>The Bernese Glaciers</h1>
+</div>
+
+<div class="page">
+
+  <div class="intro">
+    <p>
+      Photography has long been part of my life. During my Master’s studies at ETH Zurich, an
+      analog photography course introduced me to film photography, a medium that continues
+      to shape my way of seeing. Its physical process, technical demands, and reliability in
+      the field stand in contrast to purely digital workflows.
+    </p>
+    <p>
+      Among various photographic projects, <em>The Bernese Glaciers</em> is of particular
+      importance. As an alpinist, I observe the rapid retreat of alpine glaciers at close
+      range. Using analog photography, I seek to record these landscapes as they are today,
+      at a moment of rapid change.
+    </p>
+  </div>
+
+  <div class="gallery">
+    <!-- Add as many images as you like -->
+    <img src="glacier1.jpg" alt="Bernese glacier">
+    <img src="glacier2.jpg" alt="Bernese glacier">
+    <img src="glacier3.jpg" alt="Bernese glacier">
+    <img src="glacier4.jpg" alt="Bernese glacier">
+    <img src="glacier5.jpg" alt="Bernese glacier">
+    <img src="glacier6.jpg" alt="Bernese glacier">
+    <img src="glacier7.jpg" alt="Bernese glacier">
+    <img src="glacier8.jpg" alt="Bernese glacier">
+    <img src="glacier9.jpg" alt="Bernese glacier">
+    <img src="glacier10.jpg" alt="Bernese glacier">
+  </div>
+
+  <footer>
+    © Dominik Andrin Hummel
+  </footer>
+
+</div>
+
+</body>
+</html>
 
