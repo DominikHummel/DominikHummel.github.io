@@ -29,7 +29,6 @@
       line-height: 1.6;
     }
 
-    /* Fixed navigation */
     header {
       position: fixed;
       top: 0;
@@ -52,7 +51,6 @@
       color: var(--accent);
     }
 
-    /* Hero */
     .hero {
       height: 100vh;
       background: url('WhatsApp%20Image%202025-07-22%20at%2021.44.00.jpeg') center/cover no-repeat;
@@ -77,23 +75,21 @@
       z-index: 1;
     }
 
-    /* HERO TITLE — modern font restored */
     .hero h1 {
-      font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Montserrat', system-ui, sans-serif;
       font-size: 2.4rem;
       margin: 0 0 0.5rem 0;
       font-weight: 700;
     }
 
     .hero h2 {
-      font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Montserrat', system-ui, sans-serif;
       font-size: 1.1rem;
       font-weight: 500;
       margin: 0;
       color: #f2ede6;
     }
 
-    /* Page layout */
     .page {
       max-width: 900px;
       margin: 0 auto;
@@ -110,7 +106,6 @@
       margin-bottom: 1.2rem;
     }
 
-    /* Kate-style entries with extra spacing */
     .entry {
       display: grid;
       grid-template-columns: 140px 1fr;
@@ -122,25 +117,17 @@
       text-align: right;
       color: var(--muted);
       font-size: 9.5pt;
-      padding-top: 0.15rem;
       white-space: nowrap;
     }
 
-    .entry-content strong {
-      font-weight: 700;
-    }
-
-    .entry-content p {
-      margin: 0.2rem 0 0.4rem 0;
+    .entry-summary {
+      margin: 0.2rem 0 0.6rem 0;
+      color: #333;
     }
 
     .entry-content ul {
       margin: 0.4rem 0 0 1.2rem;
       padding: 0;
-    }
-
-    .entry-content li {
-      margin-bottom: 0.3rem;
     }
 
     footer {
@@ -154,10 +141,9 @@
       .entry {
         grid-template-columns: 1fr;
       }
-
       .entry-date {
         text-align: left;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.3rem;
       }
     }
   </style>
@@ -169,6 +155,8 @@
     <a href="#profile">Profile</a>
     <a href="#work">Work</a>
     <a href="#education">Education</a>
+    <a href="market-garden.html" target="_blank">Market Gardening</a>
+    <a href="photography.html" target="_blank">Photography</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -196,13 +184,17 @@
   <h3>Work Experience</h3>
 
   <div class="entry">
-    <div class="entry-date">March 2022 – Present</div>
-    <div class="entry-content">
+    <div class="entry-date">Mar 2022 – Present</div>
+    <div>
       <strong>Technician Specialist — WSL</strong>
-      <p>Swiss Federal Institute for Forest, Snow and Landscape Research</p>
+      <p class="entry-summary">
+        Responsible for the coordination and long-term operation of national-scale forest
+        monitoring infrastructure, combining technical maintenance, extensive fieldwork,
+        and collaboration with international research networks.
+      </p>
       <ul>
         <li>Management of 68 ecological TreeNet research sites across Switzerland</li>
-        <li>Coordination and maintenance of hundreds of ecosystem sensors</li>
+        <li>Coordination and maintenance of ecosystem sensor networks</li>
         <li>Main contact for national and international collaborations (ICOS, UPSCALE, FORWARD)</li>
         <li>Development of GPS usage standards and internal training</li>
       </ul>
@@ -210,9 +202,13 @@
   </div>
 
   <div class="entry">
-    <div class="entry-date">Mar 2023 – Jul 2023</div>
-    <div class="entry-content">
+    <div class="entry-date">Mar – Jul 2023</div>
+    <div>
       <strong>Scientific Assistant — WSL</strong>
+      <p class="entry-summary">
+        Contributed to interdisciplinary urban ecology research through spatial analysis,
+        field coordination, and stakeholder engagement.
+      </p>
       <ul>
         <li>Spatial and ecological analysis for the PAPPUS urban ecology project</li>
         <li>Landowner surveys and coordination of experimental sites</li>
@@ -221,9 +217,13 @@
   </div>
 
   <div class="entry">
-    <div class="entry-date">Mar 2022 – Dec 2022</div>
-    <div class="entry-content">
+    <div class="entry-date">Mar – Dec 2022</div>
+    <div>
       <strong>Technician — WSL</strong>
+      <p class="entry-summary">
+        Supported national soil monitoring efforts through field sampling, laboratory work,
+        and geospatial data processing.
+      </p>
       <ul>
         <li>Field sampling and laboratory analysis for the Swiss National Soil Inventory</li>
         <li>High-precision geolocation using EMLID Reach GPS</li>
@@ -234,8 +234,12 @@
 
   <div class="entry">
     <div class="entry-date">Sep 2021 – Mar 2022</div>
-    <div class="entry-content">
+    <div>
       <strong>Assistant — WSL</strong>
+      <p class="entry-summary">
+        Assisted in ecological data processing and analysis, focusing on vegetation
+        structure and canopy metrics.
+      </p>
       <ul>
         <li>Analysis of hemispherical images and Leaf Area Index (LAI)</li>
         <li>Custom R scripts for data processing</li>
@@ -249,7 +253,7 @@
 
   <div class="entry">
     <div class="entry-date">2024 – 2025</div>
-    <div class="entry-content">
+    <div>
       <strong>Training for Wildlife Trapping (Medium & Large Mammals)</strong>
       <p>University of Bern</p>
     </div>
@@ -257,7 +261,7 @@
 
   <div class="entry">
     <div class="entry-date">2018 – 2020</div>
-    <div class="entry-content">
+    <div>
       <strong>MSc Agricultural Science (Animal Science)</strong>
       <p>ETH Zurich</p>
       <p><em>Thesis:</em> Uncovering the Hidden Pathways of Animal Diseases in Qualitative Interviews with Swiss Pig Farmers</p>
@@ -266,12 +270,23 @@
 
   <div class="entry">
     <div class="entry-date">2015 – 2018</div>
-    <div class="entry-content">
+    <div>
       <strong>BSc Agricultural Science</strong>
       <p>ETH Zurich</p>
       <p><em>Thesis:</em> Correlation between Somatic Cell Count (SCC) and Extracellular Vesicles in Milk</p>
     </div>
   </div>
+</section>
+
+<section>
+  <h3>Additional Skills</h3>
+  <ul>
+    <li>Spatial data analysis and visualization (R, GIS)</li>
+    <li>Field instrumentation, sensor networks, GPS surveying</li>
+    <li>Project coordination and field logistics</li>
+    <li>Rescue soldier training (Swiss Armed Forces)</li>
+    <li>Languages: German (native), English (fluent)</li>
+  </ul>
 </section>
 
 <section id="contact">
@@ -284,6 +299,5 @@
 </footer>
 
 </div>
-
 </body>
 </html>
