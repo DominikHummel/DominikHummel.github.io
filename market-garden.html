@@ -5,7 +5,7 @@
   <title>Market Gardening – Dominik Andrin Hummel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Fonts (same visual language as CV) -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
@@ -14,10 +14,15 @@
       --fg: #1f2933;
       --muted: #6b5e57;
       --accent: #0f766e;
+      --header-height: 56px;
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth; /* soft scroll transition */
     }
 
     body {
@@ -26,13 +31,15 @@
       color: var(--fg);
       font-family: "ITC Berkeley Oldstyle", "Libre Baskerville", Georgia, serif;
       font-size: 10pt;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
+    /* Header */
     header {
       position: fixed;
       top: 0;
       width: 100%;
+      height: var(--header-height);
       background: rgba(252, 251, 250, 0.95);
       border-bottom: 1px solid #e0dcd5;
       z-index: 1000;
@@ -51,22 +58,38 @@
       color: var(--accent);
     }
 
+    /* Hero */
     .hero {
-      height: 70vh;
-      background: #ddd center/cover no-repeat;
+      margin-top: var(--header-height);
+      height: 65vh;
+      background: url('garden-hero.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 2rem;
+      position: relative;
+      border-bottom: 1px solid #e0dcd5;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
     }
 
     .hero h1 {
+      position: relative;
+      z-index: 1;
       font-family: 'Montserrat', system-ui, sans-serif;
       font-size: 2.2rem;
       margin: 0;
+      color: #ffffff;
+      letter-spacing: 0.02em;
     }
 
+    /* Page */
     .page {
       max-width: 900px;
       margin: 0 auto;
@@ -74,7 +97,7 @@
     }
 
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
     }
 
     section h2 {
@@ -83,6 +106,7 @@
       margin-bottom: 1rem;
     }
 
+    /* Gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -96,11 +120,22 @@
       border-radius: 2px;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       font-size: 9pt;
       color: var(--muted);
       margin-top: 4rem;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        height: 50vh;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -116,38 +151,77 @@
 
 <div class="page">
 
-<section>
+<section id="overview">
   <h2>Overview</h2>
   <p>
-    I operate a small-scale market gardening enterprise focused on the production of
-    high-quality fruits using ecologically sound practices. The project is entirely
-    self-managed and combines practical horticulture, long-term planning, and
-    close observation of soil–plant interactions.
+    I operate a small-scale market gardening project focused on low-input fruit production
+    under Swiss climatic conditions. The project combines ecological cultivation principles
+    with systematic observation and evaluation, aiming to explore the feasibility of
+    growing selected subtropical fruit species without energy-intensive infrastructure.
   </p>
 </section>
 
-<section>
-  <h2>Focus & Practices</h2>
-  <ul>
-    <li>Small-scale fruit production with an emphasis on quality over yield</li>
-    <li>Soil health–oriented management and minimal external inputs</li>
-    <li>Manual and low-mechanization approaches</li>
-    <li>Direct responsibility for planning, maintenance, and harvest</li>
-  </ul>
+<section id="concept">
+  <h2>Concept & Experimental Approach</h2>
+  <p>
+    The cultivation system was designed as a mixed planting arrangement, with species and
+    varieties deliberately combined to take advantage of allelopathic interactions and
+    microclimatic effects. Rather than optimizing for maximum yield, the focus was placed on
+    fruit quality, resource efficiency, and long-term system stability.
+  </p>
 </section>
 
-<section>
+<section id="system">
+  <h2>Cultivation System</h2>
+  <p>
+    All plants were cultivated in containers, enabling the productive use of urban ground
+    otherwise unsuitable for food production. This approach allowed precise control of soil
+    composition and nutrient availability while maintaining flexibility in spatial
+    arrangement.
+  </p>
+  <p>
+    Water and nutrient inputs were managed using a drip irrigation system, allowing highly
+    efficient and targeted application. No heating systems were used, and no chemical plant
+    protection products were applied during cultivation.
+  </p>
+</section>
+
+<section id="evaluation">
+  <h2>Variety Trials & Evaluation</h2>
+  <p>
+    Across multiple growing seasons, harvest surveys were conducted to assess ripening
+    success, yield stability, and fruit quality of selected subtropical species and
+    varieties under relatively harsh climatic conditions. Particular attention was given
+    to phenological timing, environmental tolerance, and sensory quality at maturity.
+  </p>
+  <p>
+    These observations were used to identify varieties capable of producing high-quality
+    fruit in Switzerland without the need for energy-intensive interventions.
+  </p>
+</section>
+
+<section id="outcome">
+  <h2>Outcome & Application</h2>
+  <p>
+    The project demonstrated that selected subtropical fruit varieties can be cultivated
+    successfully under Swiss conditions using low-input methods. Harvested fruits were
+    supplied directly to <em>La Couronne</em> (Solothurn), a fine-dining restaurant
+    recognized by GaultMillau, where quality and consistency were essential criteria.
+  </p>
+</section>
+
+<section id="gallery">
   <h2>Selected Impressions</h2>
   <p>
-    The following images document selected aspects of cultivation, plant development,
-    and seasonal dynamics within the garden.
+    The following images document cultivation setups, plant development, and selected
+    harvest moments throughout the seasons.
   </p>
 
   <div class="gallery">
-    <!-- Replace image filenames with your actual uploaded images -->
-    <img src="garden1.jpg" alt="Market garden image 1">
-    <img src="garden2.jpg" alt="Market garden image 2">
-    <img src="garden3.jpg" alt="Market garden image 3">
+    <!-- Replace with your actual images -->
+    <img src="garden1.jpg" alt="Market garden cultivation setup">
+    <img src="garden2.jpg" alt="Subtropical fruit development">
+    <img src="garden3.jpg" alt="Harvested fruit">
   </div>
 </section>
 
