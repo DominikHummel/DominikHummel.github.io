@@ -125,15 +125,22 @@
     /* Gallery */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
-      margin-top: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin-top: 2rem;
     }
 
     .gallery img {
       width: 100%;
-      height: auto;
-      border-radius: 2px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     /* Footer */
@@ -230,17 +237,18 @@
   </p>
 </section>
 
+<section id="gallery">
+  <h2>Gallery</h2>
   <div class="gallery">
-    <!-- Replace with your actual images -->
-    <img src="images/garden1.jpg" >
-    <img src="images/garden3.jpg" >
-    <img src="images/garden5.jpg" >
-    <img src="images/garden6.jpg" >
-    <img src="images/garden7.jpg" >
-    <img src="images/garden8.jpg" >
-    <img src="images/garden9.jpg" >
-    <img src="images/garden11.jpg" >
-    <img src="images/garden12.jpg" >
+    <img src="images/garden1.jpg" alt="Garden 1">
+    <img src="images/garden3.jpg" alt="Garden 3">
+    <img src="images/garden5.jpg" alt="Garden 5">
+    <img src="images/garden6.jpg" alt="Garden 6">
+    <img src="images/garden7.jpg" alt="Garden 7">
+    <img src="images/garden8.jpg" alt="Garden 8">
+    <img src="images/garden9.jpg" alt="Garden 9">
+    <img src="images/garden11.jpg" alt="Garden 11">
+    <img src="images/garden12.jpg" alt="Garden 12">
   </div>
 </section>
 
